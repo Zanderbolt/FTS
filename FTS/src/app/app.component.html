@@ -1,0 +1,38 @@
+<!-- SideBar -->
+<div id="sidebar">
+
+    <!-- Toggle Button -->
+    <div class="toggle-btn" (click)="onToggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- End Toggle Button -->
+    <!-- List of Items -->
+    <ul>
+        <!-- Item 1 -->
+        <a routerLink="/home">
+            <li>
+                <i class="fas fa-home"></i> Inicio
+            </li>
+        </a>
+        <!-- Fin Item 1 -->
+        <!-- Item 2 -->
+        <a routerLink="/justificantes">
+            <li>
+                <i class="fas fa-user-md"></i> Justificantes
+            </li>
+        </a>
+        <!-- Fin item 2 -->
+    </ul>
+    <!-- End of List -->
+
+
+    <!-- Area de Trabajo -->
+    <div id="working-area">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- Fin de Area de Trabajo -->
+
+</div>
+<!-- Fin SideBar -->
