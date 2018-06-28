@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="text-center"> Lista de Justificantes</h2>
+    <table class="table table-sm table-hover">
+      <thead class="thead-dark text-center">
+        <tr>
+          <th scope="col"> Nombre Alumno </th>
+          <th scope="col"> Semestre y Grupo </th>          
+          <th scope="col"> Fecha </th>
+          <th scope="col"> Materias </th>
+          <th scope="col"> Motivo </th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let justificantes of justificantesList" >
+          <td> {{justificantes.nombre}} </td>
+          <td> {{justificantes.semestre}} | {{justificantes.grupo}} </td>          
+          <td> {{justificantes.fecha}} </td>
+          <td> {{justificantes.materias}} </td>
+          <td> {{justificantes.motivo}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

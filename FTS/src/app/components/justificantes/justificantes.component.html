@@ -20,7 +20,7 @@
                             <i class="fas fa-user-graduate"></i>
                         </span>
                     </h2>
-                    <form>
+                    <form #justificanteForm="ngForm" (ngSubmit)="onSubmit(justificanteForm)">
                         <!-- Primer Grupo -->
                         <div class="form-group row">
                             <div class="col-8">
@@ -30,7 +30,8 @@
                                             <i class="fas fa-user"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Nombre del Alumno">
+                                    <input type="text" class="form-control" name="nombre" #nombre="ngModel" [(ngModel)]="justificanteService.selectedJustificante.nombre"
+                                        placeholder="Nombre del Alumno">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -40,7 +41,8 @@
                                             <i class="fas fa-sort-numeric-up"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Semestre">
+                                    <input type="text" class="form-control" name="semestre" #semestre="ngModel" [(ngModel)]="justificanteService.selectedJustificante.semestre"
+                                        placeholder="Semestre">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -50,31 +52,33 @@
                                             <i class="fas fa-sort-alpha-up"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Grupo">
+                                    <input type="text" class="form-control" name="grupo" #grupo="ngModel" [(ngModel)]="justificanteService.selectedJustificante.grupo"
+                                        placeholder="Grupo">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Segundo Grupo -->
                         <div class="form-group row">
-                            <div class="col-2">
+                            <div class="col-3">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-calendar-alt"></i>
                                         </span>
                                     </div>
-                                    <input class="form-control" type="date">
+                                    <input class="form-control" name="fecha" #fecha="ngModel" [(ngModel)]="justificanteService.selectedJustificante.fecha" type="date">
                                 </div>
                             </div>
-                            <div class="col-10">
+                            <div class="col-9">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="fas fa-clipboard-list"></i>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Materias">
+                                    <input type="text" class="form-control" name="materias" #materias="ngModel" [(ngModel)]="justificanteService.selectedJustificante.materias"
+                                        placeholder="Materias">
                                 </div>
                             </div>
                         </div>
@@ -88,24 +92,41 @@
                                             <i class="fas fa-syringe"></i>
                                         </span>
                                     </div>
-                                    <textarea class="form-control" rows="5" placeholder="Motivo"></textarea>
+                                    <textarea class="form-control" rows="5" name="motivo" #motivo="ngModel" [(ngModel)]="justificanteService.selectedJustificante.motivo"
+                                        placeholder="Motivo"></textarea>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Cuarto Grupo -->
                         <div class="form-group row">
-                            <div class="col-4"></div>                           
+                            <div class="col-4"></div>
                             <div class="col-4">
-                                <button type="button" class="btn btn-success btn-lg btn-block">  <i class="fas fa-save"></i> Guardar </button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">
+                                    <i class="fas fa-save"></i> Guardar 
+                                </button>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-2">
+                                <button type="reset" class="btn btn-secondary btn-lg btn-block" (click)="resetForm(justificanteForm)">
+                                    <i class="fas fa-sync-alt"></i> Limpiar 
+                                </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- Fin Datos Alumno -->
-    <!-- <input type="text" class="form-control" placeholder="Materias"> -->
+    
+<hr>
 
+    <!-- Mostrar Justificantes -->
+    <div class="row">
+        <div class="col-12">
+            <app-justificantes-list></app-justificantes-list>
+        </div>
+    </div>
 </div>

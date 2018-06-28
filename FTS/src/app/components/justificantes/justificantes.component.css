@@ -1,5 +1,6 @@
 .jumbotron {
     background-image: url('../../../assets/justificantes_jumbotron.jpg');
+    background-size: cover;
     border-style: ridge;
     border-color: #578396;
     font-family: 'Cairo', sans-serif;
@@ -9,7 +10,7 @@ h2 {
     font-family: 'Raleway', sans-serif;
     color: #0B3A7E;
 }
-
+/* 
 .card {
-    background-color: #D9FFFC;
-}
+    background-color: #F5FAE4;    
+} */
