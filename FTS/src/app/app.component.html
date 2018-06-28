@@ -1,38 +1,45 @@
-<!-- SideBar -->
-<div id="sidebar">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <!-- SideBar -->
+            <div id="sidebar">
+                <!-- Toggle Button -->
+                <div class="toggle-btn" (click)="onToggleSidebar()">                    
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <i *ngIf = "show" class="fas fa-arrow-left"></i>
+                    <i *ngIf = "!show" class="fas fa-arrow-right"></i>
+                </div>
+                <!-- End Toggle Button -->
 
-    <!-- Toggle Button -->
-    <div class="toggle-btn" (click)="onToggleSidebar()">
-        <span></span>
-        <span></span>
-        <span></span>
+                <!-- List of Items -->
+                <ul>
+                    <!-- Item 1 -->
+                    <a routerLink="/">
+                        <li class="home">
+                            <i class="fas fa-home"></i> Inicio
+                        </li>
+                    </a>
+                    <!-- Fin Item 1 -->
+                    <!-- Item 2 -->
+                    <a routerLink="/justificantes">
+                        <li class="justificantes">
+                            <i class="fas fa-user-md"></i> Justificantes
+                        </li>
+                    </a>
+                    <!-- Fin item 2 -->
+                </ul>
+                <!-- End of List -->
+            </div>
+            <!-- Fin SideBar -->
+        </div>
+
+        <!-- Working Area -->
+        <div id="working-area" class="col-10">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- End of Working Area -->
+
     </div>
-    <!-- End Toggle Button -->
-    <!-- List of Items -->
-    <ul>
-        <!-- Item 1 -->
-        <a routerLink="/home">
-            <li>
-                <i class="fas fa-home"></i> Inicio
-            </li>
-        </a>
-        <!-- Fin Item 1 -->
-        <!-- Item 2 -->
-        <a routerLink="/justificantes">
-            <li>
-                <i class="fas fa-user-md"></i> Justificantes
-            </li>
-        </a>
-        <!-- Fin item 2 -->
-    </ul>
-    <!-- End of List -->
-
-
-    <!-- Area de Trabajo -->
-    <div id="working-area">
-        <router-outlet></router-outlet>
-    </div>
-    <!-- Fin de Area de Trabajo -->
-
 </div>
-<!-- Fin SideBar -->

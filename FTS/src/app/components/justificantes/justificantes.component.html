@@ -1,12 +1,111 @@
-<div id="sidebar">
-  <div id="working-area">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container-fluid">
+
+    <!-- Jumbotron -->
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron text-center">
+                <h1 class="display-4"> Módulo de Justificantes</h1>
+            </div>
         </div>
-      </div>
     </div>
+    <!-- Fin Jumbotron -->
+
+    <!-- Datos Alumno -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card" style="width: 100%;">
+                <div class="card-body">
+                    <h2 class="card-title text-center"> Datos del Alumno
+                        <span>
+                            <i class="fas fa-user-graduate"></i>
+                        </span>
+                    </h2>
+                    <form>
+                        <!-- Primer Grupo -->
+                        <div class="form-group row">
+                            <div class="col-8">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Nombre del Alumno">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-sort-numeric-up"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Semestre">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-sort-alpha-up"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Grupo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Segundo Grupo -->
+                        <div class="form-group row">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-calendar-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" type="date">
+                                </div>
+                            </div>
+                            <div class="col-10">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-clipboard-list"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Materias">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tercer Grupo -->
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-syringe"></i>
+                                        </span>
+                                    </div>
+                                    <textarea class="form-control" rows="5" placeholder="Motivo"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cuarto Grupo -->
+                        <div class="form-group row">
+                            <div class="col-4"></div>                           
+                            <div class="col-4">
+                                <button type="button" class="btn btn-success btn-lg btn-block">  <i class="fas fa-save"></i> Guardar </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Datos Alumno -->
+    <!-- <input type="text" class="form-control" placeholder="Materias"> -->
+
 </div>

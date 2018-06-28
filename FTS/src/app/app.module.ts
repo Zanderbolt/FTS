@@ -7,10 +7,11 @@ import {Routes, RouterModule} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { JustificantesComponent } from './components/justificantes/justificantes.component';
+import { HeaderComponent } from './components/header/header.component';
 
 // appRoutes
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'justificantes', component: JustificantesComponent }
 ]
 
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,    
-    JustificantesComponent,
+    JustificantesComponent, HeaderComponent,
     ],
   imports: [
     BrowserModule,

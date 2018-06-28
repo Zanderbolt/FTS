@@ -6,12 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  show:boolean = false;
   title = 'app';
 
   
 onToggleSidebar() {
   document.getElementById("sidebar").classList.toggle('active');
-  document.getElementById("working-area").classList.toggle('active');
+  document.getElementById("working-area").classList.toggle('active');  
+  if (this.show)
+    this.show = false
+  else if (!this.show)
+    this.show = true;
 }
 
 }
